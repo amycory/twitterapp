@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *=requiere normnalize 
+ *= require_tree .
+ *= require_self
+ */
+
+html{
+	font-size: 16px;
+	height:100%;
+	body {
+		background: url("imagentwitter.jpg") center top no-repeat;
+		background-size:cover;
+		font:normal 62.5% Arial, Tahoma, sans-serif;
+		height:100%;
+		margin:0;
+	}
+}
+
+.container {
+	border:1px solid red;
+	margin:0 auto;
+	max-width: 1024px;
+	width: 100%;
+	.introduction {
+		color: white;
+		display: inline-block;
+		width: 65%;
+		h1 {
+			font-size:3.8em;
+		}
+		p.text {
+			font-size: 2.1em;
+		}
+		.tweet {
+			font-size: 1.4em;
+			.data {
+				font-size: 0.92857142857143em;
+				text-decoration: underline;
+			}
+		}
+	}
+	.forms {
+		vertical-align: top;
+		display: inline-block;
+		width: 35%;
+		div {
+			background-color:white;
+			display:inline-block;
+			form {
+				display: block;
+				width:100%;
+				input {
+					border:1px solid #ccd6dd;
+					border-radius: 3px;
+					color:#292f33;
+					font-size: 1.3em;
+					outline: none;
+					padding: 4px;
+					&:focus {
+						box-shadow: 0 0 12px rgba(112, 188, 114, .7);
+					}
+				}
+			}
+		}
+	}
+}
