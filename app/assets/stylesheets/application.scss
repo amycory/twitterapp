@@ -21,7 +21,7 @@ html{
 	body {
 		background: url("imagentwitter.jpg") center top no-repeat;
 		background-size:cover;
-		font:normal 62.5% Arial, Tahoma, sans-serif;
+		font:normal 62.5% Arial, Tahoma, sans-serif;/*en todos los exploradores va aempezar con 10px la fuente*/
 		height:100%;
 		margin:0;
 	}
@@ -37,8 +37,8 @@ html{
 	width:100%;	
 	ul {
 		list-style:none;
-		margin:0px auto;
-		padding:0px;
+		margin:0% auto;
+		padding:0%;
 		max-width: 1024px;
 		width: 100%;
 		li {
@@ -48,8 +48,8 @@ html{
 		a {
 			color:#55acee;
 			display: block;
-			font-size:13px;
-			padding: 8px 10px;
+			font-size:1.3em;
+			padding: .78125% .9765625%;   /* 8 / 1024 *//* 10 / 1024 */
 			text-decoration: none;
 		}
 	}
@@ -62,7 +62,7 @@ html{
 	.introduction {
 		color: white;
 		display: inline-block;
-		width:520px;
+		width:62.05250596658711%; /* 520 / 838 */
 		h1 {
 			font:bold 3.8em "Helvetica Neue"Arial;
 			margin-top: 0;
@@ -72,9 +72,9 @@ html{
 		}		
 	}
 	.forms {
-		vertical-align: top;
-		margin-left: 15px;
 		display: inline-block;
+		margin-left: 15px;	
+		vertical-align: top;	
 		width: 302px;
 		div {
 			background-color:white;
@@ -100,7 +100,7 @@ html{
 					box-shadow: inset 0 1px 0 #eee,#fff 0 1px 0;
 					color:#292f33;
 					font-size: 1.3em;
-					line-height:20px;
+					line-height:2.0em;
 					margin-bottom: 15px;
 					outline: none;
 					padding: 4px;
@@ -175,4 +175,8 @@ html{
 			text-decoration: underline;			
 		}
 	}
+}
+.resultado {
+	font-size: 1,6 em;
+	color: white;
 }

@@ -2,13 +2,17 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
-  root "application#index"
+  root 'application#index'
 
-  get "/vista" => "application#vista"
+  post 'signup' => "application#data"
 
-  get "/mi/ruta/es/muy/larga" => "application#rutas"
+  post 'login' => "application#intro"
 
-  # You can have the root of your site routed with "root"
+  get 'calculadora' => "application#calculadora" # para ver la calculadora
+
+  post 'calculo' => "application#calculo" # para ver el resultado
+
+    # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
   # Example of regular route:

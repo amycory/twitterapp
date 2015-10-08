@@ -17,27 +17,27 @@
 
 	--><section class="forms">
 		<div>
-			<form action="/login"method="post">
-	   			<input type="text"placeholder="Correo electrónico">
-	   			<input type="password" placeholder="Contrasena" class="medium"><!--
+			<%= form_tag("/login", method:"post") do %>
+	   			<%= text_field_tag(:correo, "", placeholder: "Correo electrónico") %>
+	   			<%= password_field_tag(:clave, "", placeholder: "Contrasena", class: "medium") %><!--
       	 		--><input type="submit"value="Iniciar sesión">
 				<label for="">
-					<input type="checkbox" name="remember_me">
+					<%= check_box_tag(name:"remember_me") %>
 					Recordar mis datos
 				</label>
 				<span>.</span>
 				<a href="#">Olvidaste tu contrasena?</a>
-			</form>
+			<%end%>
 		</div>
 
 		<div>
 			<h2> Eres nuevo en Twitter? <span>Regístrate</span></h2>
-			<form action="/signup" method="post" class="signup">
-	   			<input type="text" placeholder="Nombre completo">
-	   			<input type="text" placeholder="Correo Electrónico">
-	   			<input type="password" placeholder="Contrasena">
+			<%= form_tag("/signup", method: "post", class: "signup") do %>
+	   			<input type="text" placeholder="Nombre completo" name="nombre">
+	   			<input type="text" placeholder="Correo Electrónico" name="correo">
+	   			<input type="password" placeholder="Contrasena" name="clave">
       	 		<input type="submit"value="Registrarse">
-			</form>
+			<%end%>
 		</div>
 	</section>
 		

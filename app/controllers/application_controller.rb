@@ -7,15 +7,41 @@ class ApplicationController < ActionController::Base
     #este es el index de la aplicacion web twitter
   end
 
-  def vista
-   puts"********************"
-   puts "Acaban de entrar en la ruta /vista"
-   render "/vista"
+  def data
+    puts "***********************"
+    puts params[:nombre]
+    puts params[:correo]
+    puts params[:clave]
+    redirect_to "/"
   end
 
-  def rutas
-  	puts "***********************"
-  	puts "Acaban de entrar en una ruta muy larga"
+  def intro
+    @correo = params[:correo]
+    @clave = params[:clave]
+    render "/datos"
   end
 
+  def calculadora
+    render "/calculadora"
+  end
+
+  def calculo
+    valor1 = params[:valor1].to_i
+    valor2 = params[:valor2].to_i
+    operacion = params[:operacion].to_i
+    if operacion == 1
+      @total = valor1 + valor2
+    elsif operacion == 2
+      @total = valor1 - valor2
+    elsif operacion == 3
+      @total = valor1 * valor2
+    elsif operacion == 4
+      @total = valor1 / valor2
+    end
+    #puts "*****************"
+    #puts @total se quitan estos puts y se renderiza
+    render "/calculadora" 
+       
+  end
 end
+
